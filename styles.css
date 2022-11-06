@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #434E5A;
+    margin: 0;
+}
+
+.app-wrapper {
+    width: 100%;
+    padding: 30px;
+    background-color: #434E5A;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-line-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+}
+
+.current-date, .btn-location-wrapper {
+    display:flex;
+    width: 100%;
+    flex: 1;
+    justify-content: right;
+    align-items: center;
+}
+
+.current-date-time-wrapper {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+}
+
+.current-date {
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.5;
+    justify-content: left;
+    flex: 1;
+}
+
+.current-time {
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.5;
+    flex: 1;
+}
+
+.city-search {
+    background-color: white;
+    border-radius: 22px;
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.city-input {
+    appearance: none;
+    border: none;
+    padding: 0 16px;
+    flex: 1;
+}
+
+.city-input:focus-visible {
+    outline: none
+}
+
+
+.btn-search {
+    background-color: transparent;
+    border-style: none;
+    border-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-search:hover {
+    cursor: pointer;
+}
+
+.btn-location-wrapper {
+    justify-content: right;
+    align-items: center;
+}
+
+.location-icon-wrapper {
+    padding-top: 4px;
+    padding-right: 4px;
+}
+
+.btn-location {
+    width: fit-content;
+    background: #2D353F;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    padding: 0 14px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-location:hover {
+    cursor: pointer;
+    background-color: #1f262d;
+  }
+
+.current-temperature {
+    font-weight: bold;
+    font-size: 72px;
+    color: white;
+}
+
+.current-data-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 100px auto 100px
+}
+
+.additional-weather-data {
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.current-city {
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.weather-description {
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.5;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 650px;
+    margin: 350 auto;
+}
+
+.day-forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-wrapper {
+    display: flex;
+    white-space: nowrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-temperature-wrapper {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* white-space: nowrap; */
+}
+
+.night-temperature-wrapper {
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+footer {
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.5;
+    margin: 200px auto
+}
+
+.linkRepository {
+    text-decoration: underline;
+    color: white;
+}

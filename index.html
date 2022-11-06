@@ -3,8 +3,111 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
+        <div class="app-wrapper" id="app-wrapper">
+            <div class="top-line-wrapper" id="top-line-wrapper">
+                <div class="current-date-time-wrapper">
+                    <div class="current-date" id="current-date"><span class="current-weekday"></span>,&nbsp;<span class="date"></span></div>
+                    <div class="current-time"></div>
+                </div>
+                
+                <form class="city-search" id="city-search">
+                    <input type="text" name="city-input"  placeholder="Search city" class="city-input" id="city-input">
+                    <button class="btn-search" id=btn-search type="submit"><img class="search-icon" src = "icons/search.svg" alt="Search"/></button>
+                </form>
+
+                <div class="btn-location-wrapper" >
+                    <button class="btn-location" id="btn-location">
+                        <div class="location-icon-wrapper"><img class="location-icon" src="icons/location.svg"></div>
+                        <div class="btn-location-text">Use current location</div>
+                    </button>
+                </div>   
+            </div>
+
+            <div class="current-data-wrapper" id="current-data-wrapper">
+                <div class="current-weather-icon" id="current-weather-icon"><img src="icons/02d.svg" alt="Rain"/></div>
+                <div class="current-temperature"><span id="current-temperature">31</span>°
+                </div>
+                <div class="additional-weather-data" id="additional-weather-data">
+                    <div class="current-city" id="current-city"></div>
+                    <div class="weather-description" id="weather-description">Currently, <span class="description">Storm</span> · <span class="wind-speed" id="wind-speed">45</span><span>kmph</span></div>
+                </div>    
+            </div>
+
+            <div class="forecast" id="forecast">
+                <div class="day-forecast" id="day-forecast-0">
+                    <img src="icons/04n.svg">
+                    <div class="temperature-wrapper">
+                        <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-0">18<span>
+                            ° </div> 
+                            | 
+                        <div class="night-temperature-wrapper">
+                            <span class="night-temperature" id="night-temperature-0">8</span>
+                            °
+                        </div> 
+                    </div>
+                    <div class="day-name" id="day-name-0">Mon</div>
+                </div> 
+
+                <div class="day-forecast" id="day-forecast-1">
+                    <img src="icons/04n.svg">
+                    <div class="temperature-wrapper">
+                        <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-1">30<span>
+                            ° </div>
+                         |
+                         <div class="night-temperature-wrapper"><span class="night-temperature" id="night-temperature-1">4</span>
+                            °
+                        </div> 
+                    </div>
+                    <div class="day-name" id="day-name-1">Tue</div>
+                </div> 
+
+                <div class="day-forecast" id="day-forecast-2">
+                    <img src="icons/04n.svg">
+                    <div class="temperature-wrapper">
+                        <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-2">29<span>
+                            ° </div>
+                        |
+                        <div class="night-temperature-wrapper"><span class="night-temperature" id="night-temperature-2">9</span>
+                            °
+                        </div> 
+                    </div>
+                    <div class="day-name" id="day-name-2">Wed</div>
+                </div> 
+
+                <div class="day-forecast" id="day-forecast-3">
+                    <img src="icons/04n.svg">
+                    <div class="temperature-wrapper">
+                        <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-3">30<span>
+                            ° 
+                        </div>
+                        |
+                        <div class="night-temperature-wrapper"><span class="night-temperature" id="night-temperature-3">4</span>
+                            °
+                        </div> 
+                    </div>
+                    <div class="day-name" id="day-name-3">Thu</div>
+                </div> 
+
+                <div class="day-forecast" id="day-forecast-4">
+                    <img src="icons/04n.svg">
+                    <div class="temperature-wrapper">
+                        <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-4">19<span>
+                            ° </div>
+                        | 
+                        <div class="night-temperature-wrapper"><span class="night-temperature" id="night-temperature-4">14</span>
+                            °
+                        </div>
+                    </div>
+                    <div class="day-name" id="day-name-4">Fri</div>
+                </div> 
+            </div>
+            <footer>© 2022 · Zuzana Stellmachova - Web Engineer · <a class="linkRepository" href="https://github.com/ZuzanaStellmachova/WeatherAppFinal">GitHub repository</a></footer>
+            <div class="linkRepository"></div>
+        </div>
+        
         <script src="app.js"></script>
     </body>
 </html>
