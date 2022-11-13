@@ -73,7 +73,6 @@ function getCurrentPosition() {
 
 // WEATHER
 
-
 function getWeatherFromLocation(position) {
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
@@ -96,18 +95,66 @@ function showWeather(response) {
     city.innerHTML = response.data.name;
     let weatherDescription = document.querySelector(".description");
     weatherDescription.innerHTML = response.data.weather[0].description;
-    console.log(response.data.weather[0].description);
+    // console.log(response.data.weather[0].description);
 
     let windSpeed = document.querySelector("#wind-speed");
     windSpeed.innerHTML = response.data.wind.speed
-    console.log(response.data.weather[0].icon)
+    console.log(response)
 
-    // let iconUrl = `icons/${response.data.weather.icon}.svg`
     let weatherIcon = document.querySelector(".current-weather-icon img")
     weatherIcon.src = `icons/${response.data.weather[0].icon}.svg`
+    getForecast(response.data.coord)
+
+    document.querySelector(".current-data-wrapper").style.display = 'flex';
 }
 
 
+// FORECAST
+
+function getForecast(coordinates) {
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+  }   
+
+function displayForecast(response) {
+    console.log(response)
+    let forecastElement = document.querySelector("#forecast");
+  
+    let forecastHTML = "";
+
+    response.data.daily.forEach(function(day, index) {
+        if (index < 5) {
+            forecastHTML = 
+            forecastHTML + 
+            `
+            <div class="forecast" id="forecast">
+            <div class="day-forecast">
+                <img src="icons/${day.weather[0].icon}.svg">
+                <div class="temperature-wrapper">
+                    <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-0">${Math.round(day.temp.max)}<span>
+                        ° </div> 
+                        | 
+                    <div class="night-temperature-wrapper">
+                        <span class="night-temperature" id="night-temperature-0">${Math.round(day.temp.min)}</span>
+                        °
+                    </div> 
+                </div>
+                <div class="day-name" id="day-name-0">${formatDay(day.dt)}</div>
+            </div>
+        </div>
+        `;
+        }
+    });
+
+        forecastElement.innerHTML = forecastHTML;
+}
+
+function formatDay (timestamp) {
+    let date = new Date(timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return days[day];
+}
 
 
 

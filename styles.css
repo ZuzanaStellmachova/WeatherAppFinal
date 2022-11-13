@@ -119,6 +119,10 @@ body {
     align-items: center;
 }
 
+img {
+    display: block;
+}
+
 .btn-location:hover {
     cursor: pointer;
     background-color: #1f262d;
@@ -136,7 +140,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin: 100px auto 100px
+    margin: 100px auto 100px;
+    display: none;
 }
 
 .additional-weather-data {
