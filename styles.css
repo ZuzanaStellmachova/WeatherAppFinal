@@ -2,13 +2,15 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-color: #434E5A;
     margin: 0;
 }
 
-.app-wrapper {
+body {
     width: 100%;
+    min-height: 100vh;
     padding: 30px;
     background-color: #434E5A;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,7 +25,6 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    flex: 1;
 }
 
 .current-date, .btn-location-wrapper {
@@ -39,8 +40,6 @@ body {
     display:flex;
     flex-direction: column;
     flex: 1;
-    /* justify-content: flex-start; */
-    /* align-items: center; */
 }
 
 .current-date {
@@ -169,6 +168,7 @@ img {
     gap: 40px;
     max-width: 650px;
     margin: 350 auto;
+    
 }
 
 .day-forecast {
@@ -184,6 +184,7 @@ img {
     gap: 8px;
     justify-content: center;
     align-items: center;
+    margin: 15px 0
 }
 
 .day-temperature-wrapper {
@@ -206,7 +207,7 @@ footer {
     font-size: 14px;
     line-height: 17px;
     opacity: 0.5;
-    margin: 200px auto
+    margin-top: auto;
 }
 
 .linkRepository {
