@@ -226,15 +226,12 @@ footer {
 
 .portfolio-link {
     text-decoration: none;
+    color: white;
 }
 
 .portfolio-link:visited {
     text-decoration: none;
     color: white;
-}
-
-.dot {
-    display: block;
 }
 
 .linkRepository {
@@ -455,7 +452,7 @@ footer {
 
     footer {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
         row-gap: 8px;
         margin-top: 40px;
@@ -463,39 +460,8 @@ footer {
         text-align: center;
     }
 
-    .job-title, .dot, {
+    .job-title, .dash, .dot {
         display: none;
     }
 
 }
-
-/* ----------------------------------------------------------------------------------------------- */
-@media (max-width: 514px) {
-    .dot {
-        display: none
-    }
-    .job-title {
-        display: none;
-    }
-}
-
-/* ----------------------------------------------------------------------------------------------- */
-@media (max-width: 514px) {
-    .dot {
-        display: inline-block
-    }
-
-    .dash {
-        display: none;
-    }
-
-    .job-title {
-        display: none;
-    }
-}
-
-/* ----------------------------------------------------------------------------------------------- */
-@media (max-width: 373px) {
-    .dot {
-        display: none
-    }

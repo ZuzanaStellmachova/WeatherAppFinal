@@ -1,6 +1,6 @@
 let apiKey = `5863935ee9cca4c02ed68203f807c65b`;
 
-getCurrentPosition()
+// getCurrentPosition()
 
 // TIME AND DATE
 let currentTime = new Date();
@@ -80,6 +80,7 @@ function getWeatherFromLocation(position) {
     axios.get(apiUrl).then(showWeather);
 }
 
+getWeatherFromSearch('kosice')
 
 function getWeatherFromSearch(city) {
     // let apiKey = `5863935ee9cca4c02ed68203f807c65b`;
