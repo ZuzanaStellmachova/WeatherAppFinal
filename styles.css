@@ -71,6 +71,7 @@ body {
     padding: 0 16px;
     flex: 1;
     font-size: 16px;
+    width: 100%;
 }
 
 .city-input:focus-visible {
