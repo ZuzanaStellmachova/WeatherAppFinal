@@ -133,7 +133,7 @@ function displayForecast(response) {
                 <div class="temperature-wrapper">
                     <div class="day-temperature-wrapper"><span class="day-temperature" id="day-temperature-0">${Math.round(day.temp.max)}<span>
                         ° </div> 
-                        | 
+                        <span class="pipe">|</span> 
                     <div class="night-temperature-wrapper">
                         <span class="night-temperature" id="night-temperature-0">${Math.round(day.temp.min)}</span>
                         °

@@ -8,7 +8,7 @@
     <body>
         <div class="top-line-wrapper" id="top-line-wrapper">
             <div class="current-date-time-wrapper">
-                <div class="current-date" id="current-date"><span class="current-weekday"></span>,&nbsp;<span class="date"></span></div>
+                <div class="current-date" id="current-date"><span class="current-weekday"></span><span class="comma">,&nbsp;</span><span class="date"></span></div><span class="comma-date">,&nbsp;</span>
                 <div class="current-time"></div>
             </div>
             
@@ -27,8 +27,10 @@
         <div class="app-wrapper" id="app-wrapper">
 
             <div class="current-data-wrapper" id="current-data-wrapper">
-                <div class="current-weather-icon" id="current-weather-icon"><img src="icons/02d.svg" alt="Rain"/></div>
-                <div class="current-temperature"><span id="current-temperature"></span>°
+                <div class="icon-temperature-wrapper">
+                    <div class="current-weather-icon" id="current-weather-icon"><img src="icons/02d.svg" alt="Rain"/></div>
+                    <div class="current-temperature"><span id="current-temperature"></span>°
+                </div>
                 </div>
                 <div class="additional-weather-data" id="additional-weather-data">
                     <div class="current-city" id="current-city"></div>
@@ -105,8 +107,9 @@
                 </div>  -->
             </div>
         </div>
-        <footer>© 2022 · Zuzana Stellmachova - Web Engineer · <a class="linkRepository" href="https://github.com/ZuzanaStellmachova/WeatherAppFinal">GitHub repository</a></footer>
-        <div class="linkRepository"></div>
+        <footer>© 2022 ·&nbsp;<a href="https://dancing-taiyaki-3defad.netlify.app/index.html" class="portfolio-link" title="Check my portfolio" target="blank">Zuzana Stellmachova</a> 
+            <span class="dash">&nbsp;-&nbsp;</span><span class="job-title">Front-End Developer</span><span class="dot">&nbsp;·&nbsp;</span><a class="linkRepository" href="https://github.com/ZuzanaStellmachova/WeatherAppFinal">GitHub repository</a></footer>
+        <div class="linkRepository" title="GitHub repository"></div>
         
         <script src="app.js"></script>
     </body>
