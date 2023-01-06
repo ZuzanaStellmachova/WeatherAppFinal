@@ -50,7 +50,6 @@ time.innerHTML = hours + ":" + minutes;
 // SEARCH
 function searchCity(event) {
     event.preventDefault();
-    currentCity.innerHTML = cityInput.value;
     getWeatherFromSearch(cityInput.value);
     cityInput.value = " ";
 }
@@ -85,10 +84,18 @@ getWeatherFromSearch('kosice')
 function getWeatherFromSearch(city) {
     // let apiKey = `5863935ee9cca4c02ed68203f807c65b`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-    axios.get(apiUrl).then(showWeather);
+    
+    axios.get(apiUrl)
+    .then(showWeather)
+    .catch(function (error) {
+        alert('city not found');
+        console.log(error.toJSON());
+    });
 }
 
 function showWeather(response) {
+    // currentCity.innerHTML = cityInput.value;
+
     let temperature = Math.round(response.data.main.temp);
     let currentTemperature = document.querySelector("#current-temperature");
     currentTemperature.innerHTML = temperature;
